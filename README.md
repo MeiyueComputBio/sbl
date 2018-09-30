@@ -13,7 +13,7 @@ program converge.`sbl` can handle extremely large sample size (>100,000) and com
 
 A user manual of `sbl` is available here: [sbl manual](http://)
 
-## Installatioin
+## Installation
 
 Please download the compressed package [sbl_0.1.0.tar.gz](http://) and run the following commond in R
 
