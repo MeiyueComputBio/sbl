@@ -1,2 +1,2 @@
 # sbl
-An R package for QTL mapping and GWAS
+An R package implementing SBL method for QTL mapping and GWAS
