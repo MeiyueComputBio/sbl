@@ -11,7 +11,7 @@ program converge.`sbl` can handle extremely large sample size (>100,000) and com
 
 ## sbl manual
 
-A user manual of `sbl` is available here: [sbl manual](https://github.com/MeiyueComputBio/sbl/blob/master/sbl%20manual/sbl.Rmd)
+A user manual of `sbl` is available here: [sbl manual](https://github.com/MeiyueComputBio/sbl/blob/master/sbl%20manual/sbl.tutorial.Rmd)
 
 ## Installation
 
