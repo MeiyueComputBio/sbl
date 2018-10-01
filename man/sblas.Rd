@@ -92,8 +92,14 @@ distribution, where \eqn{\Phi[k]} is the prior variance. The estimate of
 data(gen)
 data(phe)
 data(intercept)
+
 # Run sblas to perform association study of example data
-fit<-sblas(x=intercept, y=phe, z=gen, t=0) # set t = 0 to increase sparseness of the model
+# set t = 0 to make the model most sparse
+fit<-sblas(x=intercept, y=phe, z=gen, t=0)
+my.blup<-fit$blup
+
+# set t = -2 to make the model least sparse
+fit<-sblas(x=intercept, y=phe, z=gen, t=-2)
 my.blup<-fit$blup
 }
 \author{
