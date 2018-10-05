@@ -4,11 +4,11 @@
 \name{phe}
 \alias{phe}
 \title{Phenotype}
-\format{A sequence of number with length equaling 500.}
+\format{A sequence of number with length equal to 500.}
 \usage{
 phe
 }
 \description{
-Phenotype observations of the 500 simulated individuals.
+Observations of the phenotype for 500 simulated individuals.
 }
 \keyword{datasets}

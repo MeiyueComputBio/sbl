@@ -15,7 +15,7 @@
 map
 }
 \description{
-The genetic map used in the generation of genotype indicator for
-500 simulated individuals of an F2 family from the cross of two inbred lines.
+The genetic map used in the generation of numeric genotype indicators
+for 500 simulated individuals of an F2 family from the cross of two inbred lines.
 }
 \keyword{datasets}

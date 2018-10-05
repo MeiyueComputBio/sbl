@@ -9,6 +9,6 @@
 intercept
 }
 \description{
-Design vector of intercept for the 500 simulated individuals.
+Design vector of the intercept for the 500 simulated individuals.
 }
 \keyword{datasets}
