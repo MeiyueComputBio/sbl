@@ -77,11 +77,11 @@ parameters take the values when the program converge.
 \details{
 The multiple locus hierarchical linear mixed model of SBL is
 \deqn{y=X\beta+Z\gamma+\epsilon}
-where y is a \eqn{n x 1} response variables (observations of the trait);
-X is a \eqn{n x p} design matrix for fixed effects; \eqn{\beta} is a \eqn{p x 1}
-vector of fixed effect; Z is a \eqn{n x m} genotype indicator matrix;
-\eqn{\gamma} is a \eqn{m x 1} vector of marker effects and \eqn{\epsilon} is
-a \eqn{n x 1} vector of residual errors with an aassumed
+where y is a \eqn{n*1} response variables (observations of the trait);
+X is a \eqn{n*p} design matrix for fixed effects; \eqn{\beta} is a \eqn{p*1}
+vector of fixed effect; Z is a \eqn{n*m} genotype indicator matrix;
+\eqn{\gamma} is a \eqn{m*1} vector of marker effects and \eqn{\epsilon} is
+a \eqn{n*1} vector of residual errors with an aassumed
 \eqn{\epsilon~N(0,\Sigma)} distribution. Each marker effect, \eqn{\gamma[k]}
 for marker \emph{k}, is treated as a random variable following \eqn{N(0,\Phi[k])}
 distribution, where \eqn{\Phi[k]} is the prior variance. The estimate of
