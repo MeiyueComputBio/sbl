@@ -5,7 +5,7 @@ An R package implements sparse Bayesian learning method for QTL mapping and GWAS
 
 `sbl`  The sparse Bayesian learning (SBL) method for quantitative trait locus (QTL) mapping and genome-wide association studies deals with
 a linear mixed model. This is also a multiple locus model that includes all markers (random effects) in a single model with effects being
-estimated simultaneously.SBL method adopts coordinate descent algorithm to update parameters by estimating one parameter at a time 
+estimated simultaneously. SBL method adopts coordinate descent algorithm to update parameters by estimating one parameter at a time 
 conditional on posterior modes of all other parameters. The parameter estimation process requires multiple iteration and the final 
 estimated parameters take the values when the program converge. `sbl` can handle extremely large sample size (>100,000) and outcompetes
 other multiple locus GWAS methods in terms of detection power and computing time.
