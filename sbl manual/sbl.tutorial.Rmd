@@ -4,8 +4,12 @@ author: |-
   Meiyue Wang and Shizhong Xu
  
   Department of Botany and Plant Sciences, University of California, Riverside
-date: "October 6, 2018"
-output: html_document
+date: "October 9, 2018"
+output: rmarkdown::html_document
+vignette: >
+  %\VignetteIndexEntry{'sbl.tutorial'}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
 ---
 
 ```{r setup, include=FALSE}
