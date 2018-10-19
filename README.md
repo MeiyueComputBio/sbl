@@ -16,7 +16,7 @@ A user manual of `sbl` is available here: [sbl manual](https://github.com/Meiyue
 
 ## Installation
 
-Please download the compressed package [sbl_0.1.0.tar.gz](https://github.com/MeiyueComputBio/sbl/tree/master/R%20packge) and run the following commond in R console
+Please download the compressed package [sbl_0.1.0.tar.gz](https://github.com/MeiyueComputBio/sbl/tree/master/R%20packge) and run the following commond in R console.
 
 ```R
 install.packages('sbl_0.1.0.tar.gz", repos=NULL, type='source')
