@@ -1,10 +1,10 @@
 ---
-title: "sbl: sparse Bayesian learning method for QTL mapping and GWAS"
+title: "sbl: Sparse Bayesian Learning for QTL Mapping and Genome-Wide Association Studies"
 author: |-
   Meiyue Wang and Shizhong Xu
  
   Department of Botany and Plant Sciences, University of California, Riverside
-date: "October 9, 2018"
+date: "October 17, 2018"
 output: rmarkdown::html_document
 vignette: >
   %\VignetteIndexEntry{'sbl.tutorial'}
@@ -18,12 +18,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-Single marker model that detecting one locus at a time are subject to many problems in 
+Single marker models that detecting one locus at a time are subject to many problems in 
 genome-wide association studies (GWAS) and quantitative trait locus (QTL) mapping, which
 includes large matrix inversion, over-conservativeness after Bonferroni correction and
-difficulty in evaluation of total genetic contribution.Such problems can be solved 
+difficulty in evaluation of total genetic contribution. Such problems can be solved 
 by a multiple locus model which includes all markers in the same model with effects 
-being estimated simultaneously. The Sparse Bayesian learning method (SBL), implemented
+being estimated simultaneously. The sparse Bayesian learning method (SBL), implemented
 in `sbl` package, is a multiple locus model that can handle extremely large sample 
 size (>100,000) and outcompetes other multiple locus GWAS methods in terms of detection 
 power and computing time. 
@@ -41,13 +41,13 @@ install.packages('sbl_0.1.0.tar.gz', repos=NULL, type='source')
 
 # SBL for QTL mapping and GWAS
 
-The usage of `sbl` to perform QTL mapping and GWAS is very simple:
-(Note: Please remove the markers without variation before running the program)
+The usage of `sbl` to perform QTL mapping and GWAS is very simple
+(Note: Please remove the markers without variation before running the program):
 
 1. Load input data
     + A vector of response variables (observations of the trait).
     + A design matrix for fixed effects, which represents non-genetic factors that 
-contribute to the phenotypic variance. This can be intercept only.
+contribute to the phenotypic variance. This can be the intercept only.
     + A matrix storing genotype indicators. The original three genotypes 
   ($a_1a_1$, $a_1a_2$, $a_2a_2$) should be coded to numeric indicator as (-1, 0, 1) 
     or (0, 1, 2).
@@ -65,11 +65,11 @@ data(gen)
 2. Call `sblgwas()` function to perform regression and detect significant markers.
 
 ```{r minimal invocation, message=FALSE, warning=FALSE,}
-# A minimal invocation of 'sblas()' function looks like: 
+# A minimal invocation of "sblgwas()" function looks like: 
 fit1<-sblgwas(x = intercept, y = phe, z = gen)
 
-# Restuls of markers surrounding the first simulated QTL in the example data
-fit1$blup[c(19:23),]
+# Restuls of markers surrounding the second simulated QTL with non-zero effect in the example data
+fit1$blup[c(17:21),]
 ```
 
 
@@ -87,7 +87,7 @@ fit3$parm
 ```
 
 
-`max.iter` and `min.err` are two threshold to stop the program when either of them
+`max.iter` and `min.err` are two thresholds to stop the program when either of them
 is met. 
 `max.iter` defines the maximum number of iterations that the program is 
 allowed to run, default is 200; 
@@ -95,7 +95,7 @@ allowed to run, default is 200;
 estimated from the current and the previous iteration, default is 1e-6.
 
 ```{r iteration, message=FALSE, warning=FALSE}
-# Set max.iter and min.err to control the convergence of the model 
+# Set max.iter and min.err to control the convergence of the program 
 fit4<-sblgwas(x = intercept, y = phe, z = gen, t = -1, max.iter = 300, min.err = 1e-8)
 fit4$parm
 ```
