@@ -4,11 +4,11 @@
 \name{intercept}
 \alias{intercept}
 \title{Intercept}
-\format{A sequence of number containing 500 replicates of number 1.}
+\format{A sequence of number containing 30 replicates of number 1.}
 \usage{
 intercept
 }
 \description{
-Design vector of the intercept for the 500 simulated individuals.
+Design vector of the intercept for the 30 simulated individuals.
 }
 \keyword{datasets}

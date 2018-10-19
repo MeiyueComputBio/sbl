@@ -2,14 +2,14 @@
 % Please edit documentation in R/sblgwas.R
 \name{sblgwas}
 \alias{sblgwas}
-\title{Sparse Bayesian learning for QTL mapping and GWAS}
+\title{Sparse Bayesian Learning for QTL Mapping and Genome-Wide Association Studies}
 \usage{
 sblgwas(x, y, z, t = -1, max.iter = 200, min.err = 1e-06)
 }
 \arguments{
 \item{x}{a design matrix for fixed effects}
 
-\item{y}{a vector for response variables}
+\item{y}{a vector of response variables}
 
 \item{z}{a design matrix for random effects}
 
@@ -71,21 +71,21 @@ a multiple locus model that includes all markers (random effects) in a single
 model and detect significant markers simultaneously. SBL method adopts
 coordinate descent algorithm to update parameters by estimating one parameter
 at a time conditional on the posterior modes of all other parameters. The parameter
-estimation process requires multiple iteration and the final estimated
-parameters take the values when the program converge.
+estimation process requires multiple iterations and the final estimated
+parameters take the values when the entire program converges.
 }
 \details{
 The multiple locus hierarchical linear mixed model of SBL is
 \deqn{y=X\beta+Z\gamma+\epsilon}
-where y is a \eqn{n*1} response variables (observations of the trait);
-X is a \eqn{n*p} design matrix for fixed effects; \eqn{\beta} is a \eqn{p*1}
-vector of fixed effect; Z is a \eqn{n*m} genotype indicator matrix;
-\eqn{\gamma} is a \eqn{m*1} vector of marker effects and \eqn{\epsilon} is
-a \eqn{n*1} vector of residual errors with an aassumed
+where y is an \eqn{n*1} vector of response variables (observations of the trait);
+X is an \eqn{n*p} design matrix for fixed effects; \eqn{\beta} is a \eqn{p*1}
+vector of fixed effect; Z is an \eqn{n*m} genotype indicator matrix;
+\eqn{\gamma} is an \eqn{m*1} vector of marker effects and \eqn{\epsilon} is
+an \eqn{n*1} vector of residual errors with an aassumed
 \eqn{\epsilon~N(0,\Sigma)} distribution. Each marker effect, \eqn{\gamma[k]}
 for marker \emph{k}, is treated as a random variable following \eqn{N(0,\Phi[k])}
 distribution, where \eqn{\Phi[k]} is the prior variance. The estimate of
-\eqn{\gamma[k]} is the best linear unbiased prediciton (BLUP). The estimate of
+\eqn{\gamma[k]} is best linear unbiased prediciton (BLUP). The estimate of
 \eqn{\Phi[k]} is miximum likelihood estimate (MLE).
 }
 \examples{
